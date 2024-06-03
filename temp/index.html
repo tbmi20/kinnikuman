@@ -1,0 +1,69 @@
+<html>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+      const root = ReactDOM.createRoot(app);
+
+      function createTitle(title) {
+        return <h1>{title ? title : 'Default Title'}</h1>;
+      }
+
+      function Header(props) {
+        return (
+          <header>
+            {createTitle(props.title)}
+          </header>
+        );
+      }
+
+      function App() {
+        const names = ['Alice', 'Bob', 'Charlie'];
+
+        function handleClick() {
+          console.log('Like button clicked!');
+        }
+
+        return (
+          <div>
+            <Header title="Hi!"/>
+            <Header />
+            <ul>
+              {names.map((name, index) => (
+                <li key={index}>{name}</li>
+              ))}
+            </ul>
+            <p>Welcome to React!</p>
+            <button onClick={handleClick}>Like</button>
+          </div>
+        );
+      }
+
+      root.render(<App />);
+
+
+    </script>
+    
+    <!--<script type="text/javascript">
+      Using plain JavaScript and DOM methods
+      // Select the div with the id of app
+      const app = document.getElementById('app');
+
+      // Create a new H1 element
+      const h1 = document.createElement('h1');
+
+      // Create a new text node for the H1 element
+      const text = 'Hello, World!';
+      const h1Content = document.createTextNode(text);
+
+      // Append the text node to the H1 element
+      h1.appendChild(h1Content);
+
+      // Append the H1 element to the div with the id of app
+      app.appendChild(h1);
+    </script>-->
+  </body>
+</html>
