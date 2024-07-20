@@ -4,7 +4,7 @@
 export default function BackButton() {
     return (
         <div>
-            <button onClick={() => console.log('Click')}>Back</button> 
+            <button onClick={() => console.log('Click')}>X</button> 
         </div>
     );
 }
