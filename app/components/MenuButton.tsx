@@ -1,4 +1,5 @@
 //Used for all menu buttons like in account and dropdowns
+'use client';
 
 export default function MenuButton () {
     return (
