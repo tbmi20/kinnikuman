@@ -1,4 +1,5 @@
 import Link from 'next/link';
+//style with tailwindcss
 
 export default function Navbar() {
     return (
