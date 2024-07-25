@@ -1,7 +1,9 @@
+//Put into a separate component so it can be displayed in multiple places
+
 export default function Logo() {
     return (
-        <div className="logo h-32 w-32">
-            <img src="/Wilderness Explorer.png" alt="logo" />
+        <div className="flex size-14">
+            <img src='/logo/logo.png' alt="logo" />
         </div>
     );
 }
