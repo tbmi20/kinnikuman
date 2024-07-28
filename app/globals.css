@@ -45,6 +45,6 @@ body {
   }
 
   .page-title {
-    @apply absolute top-0 text-3xl font-bold text-center text-white;
+    @apply sticky top-0 text-3xl font-bold text-center text-white;
   }
 }

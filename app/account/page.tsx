@@ -6,8 +6,6 @@ import Background from "../components/Background";
     return (
         <div>
             <Background></Background>
-            <h1>Account</h1>
-            <MenuButton></MenuButton>
             <Navbar></Navbar>
         </div>
     );

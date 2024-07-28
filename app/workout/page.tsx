@@ -7,9 +7,12 @@ export default function WorkoutPage() {
     return (
         <div>
             <Background></Background>
-            <h1>Workout</h1>
-            <WorkoutCard></WorkoutCard>
+            <h1 className='page-title'>Workout</h1>
+            <div className=''>
+                <WorkoutCard></WorkoutCard>
+            </div>
             <Navbar></Navbar>
         </div>
+        
     );
 };
