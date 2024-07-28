@@ -10,8 +10,7 @@ import { FaBook } from "react-icons/fa6";
 
 export default function Navbar() {
     return (
-        <div className='fixed z-50 bottom-0 left-0 h-16 w-screen m-0 flex flex-row text-justify bg-blue-300 text-white shadow-lg'>
-            <Link href="/" className='navbar-icon'><Logo /></Link>
+        <div className='fixed z-50 bottom-[2.5%] left-1/3 h-16 w-1/3 m-0 flex flex-row rounded-full text-justify bg-blue_1 text-white shadow-lg'>
             <Link href="/diary" className='navbar-icon'><NavIcon icon={<FaBook size="28"/>} tooltip='Diary' /></Link>
             <Link href="/workout" className='navbar-icon'><NavIcon icon={<FaDumbbell size="28"/>} tooltip='Workouts' /></Link>
             <Link href="account" className='navbar-icon'><NavIcon icon={<IoPerson size="28"/>} tooltip='Account' /></Link>

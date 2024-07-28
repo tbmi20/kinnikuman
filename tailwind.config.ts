@@ -17,7 +17,12 @@ const config: Config = {
       colors: {
         "bg_1": "#4ac29a",
         "bg_2": "#bdfff3",
-      }
+        "blue_1": "#2CAEFB",
+        "grey_1": "#94a3b8",
+      },
+      fontFamily: {
+        sans: ["Lato", 'sans-serif'],
+      },
     },
   },
   plugins: [],
