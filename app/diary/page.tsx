@@ -5,6 +5,7 @@ export default function Diary() {
     return (
         <div>
             <Background></Background>
+            <h1 className='page-title'>Diary</h1>
             <Navbar></Navbar>
         </div>
     );

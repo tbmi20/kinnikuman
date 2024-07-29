@@ -11,7 +11,7 @@ export default function WorkoutCard() {
 
 function StartWorkout() {
     return (
-        <div className="h-6 w-14 bg-grey_1 text-center rounded-md">
+        <div className="relative left-1/3 h-6 w-14 bg-grey_1 text-center rounded-md">
             <button onClick={() => console.log('Click')}>START</button>
         </div>
     );
