@@ -1,4 +1,3 @@
-import MenuButton from "../components/MenuButton"; 
 import Navbar from "../components/Navbar";
 import Background from "../components/Background";
  
