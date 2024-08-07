@@ -1,3 +1,7 @@
 tbmartinito
 f7W87UsoyzInyCj9
 mongodb+srv://tbmartinito:f7W87UsoyzInyCj9@kinnikumanm0.utrobfv.mongodb.net/
+
+login user and pw:
+TakumaMartinIto
+XqBbgqtlGXPGhUWE
