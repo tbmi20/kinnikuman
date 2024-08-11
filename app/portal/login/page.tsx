@@ -7,10 +7,10 @@ export default function loginPage() {
         <div className="min-h-screen flex flex-col items-center justify-center py-6 px-4">
           <div className="max-w-md w-full">
             <div className="p-8 rounded-2xl bg-white shadow">
-              <h2 className="text-gray-800 text-center text-2xl font-bold">Sign in</h2>
+              <h2 className="text-gray-800 text-center text-2xl font-bold">Login</h2>
               <form className="mt-8 space-y-4">
                 <div>
-                  <label className="text-gray-800 text-sm mb-2 block">User name</label>
+                  <label className="text-gray-800 text-sm mb-2 block">User name/Email</label>
                   <div className="relative flex items-center">
                     <input name="username" type="text" required className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600" placeholder="Enter user name" />
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" className="w-4 h-4 absolute right-4" viewBox="0 0 24 24">
