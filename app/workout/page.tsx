@@ -10,7 +10,7 @@ export default function WorkoutPage() {
             <Background></Background>
             <h1 className='page-title'>Workout</h1>
             <div className=''>
-                <WorkoutCard workout={getWorkouts()}></WorkoutCard>
+                <WorkoutCard></WorkoutCard>
             </div>
             <Navbar></Navbar>
         </div>
