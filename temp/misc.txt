@@ -1,0 +1,56 @@
+[
+  {
+    "_id": ObjectId("64d5fb8c8a2c8b8c8b8c8b8e"),
+    "name": "Upper Body Pump",
+    "exercises": [
+      {
+        "exerciseId": ObjectId("64d5f8c8a2c8b8c8b8c8c0d"),  // Reference to Shoulder Press
+        "sets": 3,
+        "reps": 10,
+        "weight": "20kg"
+      },
+      {
+        "exerciseId": ObjectId("64d5f8c8a2c8b8c8b8c8c0e"),  // Reference to Lat Pulldown
+        "sets": 4,
+        "reps": 12,
+        "weight": "60kg"
+      },
+      {
+        "exerciseId": ObjectId("64d5f8c8a2c8b8c8b8c8c0f"),  // Reference to Tricep Pushdown
+        "sets": 3,
+        "reps": 15,
+        "weight": "25kg"
+      }
+    ],
+    "isPublic": false
+  },
+  {
+    "_id": ObjectId("64d5fb8c8a2c8b8c8b8c8b8f"),
+    "name": "Leg Day Challenge",
+    "exercises": [
+      {
+        "exerciseId": ObjectId("64d5f8c8a2c8b8c8b8c8c10"),  // Reference to Leg Press
+        "sets": 4,
+        "reps": 10,
+        "weight": "120kg"
+      },
+      {
+        "exerciseId": ObjectId("64d5f8c8a2c8b8c8b8c8c11"),  // Reference to Lunges
+        "sets": 3,
+        "reps": 12,
+        "weight": "10kg each side"
+      },
+      {
+        "exerciseId": ObjectId("64d5f8c8a2c8b8c8b8c8c12"),  // Reference to Deadlift
+        "sets": 4,
+        "reps": 8,
+        "weight": "90kg"
+      }
+    ],
+    "isPublic": true
+  }
+]
+
+
+
+db.workouts.insertOne({name: "Upper Body Pump", exercises: [{exerciseId: ObjectId("66cf7b92a07ef6ed33228fbb"), sets: 3, reps: 10, weight: 20}, {exerciseId: ObjectId("66cf7b92a07ef6ed33228fb9"), sets: 4, reps: 12, weight: 60}, {exerciseId: ObjectId("66cf7b92a07ef6ed33228fbd"), sets: 3, reps: 15, weight: 25}], isPublic: false})
