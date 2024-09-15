@@ -10,8 +10,10 @@ export default function WorkoutPage() {
         <div>
             <Background></Background>
             <h1 className='page-title'>Workout</h1>
-            <div className=''>
-                <WorkoutCard></WorkoutCard>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4'>
+                <WorkoutCard/>
+                <WorkoutCard/>
+                <WorkoutCard/>
             </div>
             <Navbar></Navbar>
         </div>
