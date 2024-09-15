@@ -24,8 +24,8 @@
 
 @layer components {
   .navbar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-gray-400 text-white
-    hover:bg-white hover:text-slate-400 rounded-3xl hover:rounded-xl
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-cool_blue text-white
+    hover:bg-white hover:text-cool_blue rounded-3xl hover:rounded-xl
     transition-all duration-300 ease-linear;
   }
 
@@ -35,8 +35,9 @@
   }
 
   .page-title {
-    @apply text-3xl font-bold text-center text-white;
+    @apply text-3xl bg-charcoal_grey font-bold text-center text-light_grey;
   }
+
 }
 
 @layer base {

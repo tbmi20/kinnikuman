@@ -11,9 +11,9 @@ import {
 
 export default function HomePage() {
   return (
-    <div>
+    <div >
       <Background></Background>
-      <h1>Dashboard</h1>
+      <h1 className="page-title">Dashboard</h1>
       <Carousel>
         <CarouselContent>
           <CarouselItem>...</CarouselItem>
