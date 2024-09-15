@@ -15,9 +15,16 @@ const config: Config = {
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
   		},
   		colors: {
-  			'mint': '#3EB489',
-  			'light_grey': '#F5F5F5',
-  			'dark_grey': '#333333',
+  			'mint': '#98FF98',
+  			'charcoal_grey': '#333333',
+			'white': '#FFFFFF',
+			'cool_blue': '#007BFF',
+			'soft_coral': '#FF6B6B',
+			'light_mint': '#CCFFCC',
+			'soft_lilac': '#C8A2C8',
+			'warm_yellow': '#FFC857',
+			'light_grey': '#F0F0F0',
+			'medium_grey': '#777777',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
