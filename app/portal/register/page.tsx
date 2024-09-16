@@ -1,7 +1,29 @@
+"use client";
+
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
+// pages/register.tsx
+import { useState } from 'react';
 
-export default function loginPage() {
+export default function registerPage() {
+
+  const [formData, setFormData] = useState({ username: '', email: '', password: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const res = await fetch('/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+    const data = await res.json();
+    console.log(data);
+  };
+
   return (
     <div>
       <Background />
@@ -12,7 +34,7 @@ export default function loginPage() {
               Register
             </h2>
             <Separator className="my-3"/>
-            <form className="mt-8 space-y-4">
+            <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="text-light_grey text-sm mb-2 block">
                   Username
@@ -24,6 +46,7 @@ export default function loginPage() {
                     required
                     className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter user name"
+                    onChange={handleChange}
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +80,7 @@ export default function loginPage() {
                     required
                     className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter email"
+                    onChange={handleChange}
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -90,6 +114,7 @@ export default function loginPage() {
                     required
                     className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter password"
+                    onChange={handleChange}
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +133,7 @@ export default function loginPage() {
 
               <div className="!mt-8">
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-light_grey bg-cool_blue hover:bg-blue-700 focus:outline-none"
                 >
                   Sign Up

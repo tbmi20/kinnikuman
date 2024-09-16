@@ -1,7 +1,28 @@
+"use client";
+
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
+import { useState } from 'react';
 
 export default function loginPage() {
+
+    const [email, setEmail] = useState('');
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setEmail(e.target.value);
+    };
+  
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      const res = await fetch('/api/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      console.log(data);
+    };
+
   return (
     <div>
       <Background />
@@ -15,7 +36,7 @@ export default function loginPage() {
             <div className="text-light_grey text-left text-sm font-bold">
                 Enter the email associated with your account and we'll send you a link to reset your password.
             </div>
-            <form className="mt-8 space-y-4">
+            <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="text-light_grey text-sm mb-2 block">
                   Email
@@ -27,6 +48,7 @@ export default function loginPage() {
                     required
                     className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter email"
+                    onChange={handleChange}
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +73,7 @@ export default function loginPage() {
 
               <div className="!mt-8">
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-cool_blue hover:bg-blue-700 focus:outline-none"
                 >
                   Send Recovery Email
