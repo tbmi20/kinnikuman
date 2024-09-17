@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Logo from './Logo';
 import { IconType } from 'react-icons';
 import { FaDumbbell } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";

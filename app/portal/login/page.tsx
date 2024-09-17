@@ -3,6 +3,7 @@
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
 import { useState } from 'react';
+import Link from "next/link";
 
 export default function loginPage() {
 
@@ -43,7 +44,7 @@ export default function loginPage() {
                     name="username"
                     type="text"
                     required
-                    className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
+                    className="w-full text-charcoal_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter user name"
                     onChange={handleChange}
                   />
@@ -77,7 +78,7 @@ export default function loginPage() {
                     name="password"
                     type="password"
                     required
-                    className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
+                    className="w-full text-charcoal_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter password"
                     onChange={handleChange}
                   />
@@ -131,12 +132,12 @@ export default function loginPage() {
               </div>
               <p className="text-light_grey text-sm !mt-8 text-center">
                 Don't have an account?{" "}
-                <a
+                <Link
                   href="../portal/register"
                   className="text-cool_blue hover:underline ml-1 whitespace-nowrap font-semibold"
                 >
                   Register here
-                </a>
+                </Link>
               </p>
             </form>
           </div>

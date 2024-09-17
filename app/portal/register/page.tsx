@@ -2,6 +2,7 @@
 
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 // pages/register.tsx
 import { useState } from 'react';
 
@@ -44,7 +45,7 @@ export default function registerPage() {
                     name="username"
                     type="text"
                     required
-                    className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
+                    className="w-full text-charcoal_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter user name"
                     onChange={handleChange}
                   />
@@ -78,7 +79,7 @@ export default function registerPage() {
                     name="username"
                     type="text"
                     required
-                    className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
+                    className="w-full text-charcoal_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter email"
                     onChange={handleChange}
                   />
@@ -112,7 +113,7 @@ export default function registerPage() {
                     name="password"
                     type="password"
                     required
-                    className="w-full text-light_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
+                    className="w-full text-charcoal_grey text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="Enter password"
                     onChange={handleChange}
                   />
@@ -141,12 +142,12 @@ export default function registerPage() {
               </div>
               <p className="text-light_grey text-sm !mt-8 text-center">
                 Already have an account?{" "}
-                <a
+                <Link
                   href="../portal/login"
                   className="text-cool_blue hover:underline ml-1 whitespace-nowrap font-semibold"
                 >
                   Login here
-                </a>
+                </Link>
               </p>
             </form>
           </div>
