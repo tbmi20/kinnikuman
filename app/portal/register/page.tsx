@@ -3,7 +3,7 @@
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-// pages/register.tsx
+import {handleRegister} from "@/lib/portals/auth";
 import { useState } from 'react';
 
 export default function registerPage() {
@@ -12,17 +12,6 @@ export default function registerPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const res = await fetch('/api/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-    const data = await res.json();
-    console.log(data);
   };
 
   return (
@@ -35,7 +24,7 @@ export default function registerPage() {
               Register
             </h2>
             <Separator className="my-3"/>
-            <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
+            <form className="mt-8 space-y-4" onSubmit={handleRegister}>
               <div>
                 <label htmlFor="username" className="text-light_grey text-sm mb-2 block">
                   Username

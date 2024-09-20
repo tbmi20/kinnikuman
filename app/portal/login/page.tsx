@@ -1,27 +1,16 @@
 "use client";
-
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
-import { useState } from 'react';
+import { handleLogin } from "@/lib/portals/auth";
+import { useState } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import Link from "next/link";
 
 export default function loginPage() {
 
-  const [formData, setFormData] = useState({ email: '', password: '' });
-
+  const [formData, setFormData] = useState({ username: '', password: '' });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const res = await fetch('/api/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-    const data = await res.json();
-    console.log(data);
   };
 
   return (
@@ -34,7 +23,7 @@ export default function loginPage() {
               Login
             </h2>
             <Separator className="my-3"/>
-            <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
+            <form className="mt-8 space-y-4" onSubmit={handleLogin}>
               <div>
                 <label htmlFor="username" className="text-light_grey text-sm mb-2 block">
                   Username
