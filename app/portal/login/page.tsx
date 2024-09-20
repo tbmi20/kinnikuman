@@ -36,11 +36,12 @@ export default function loginPage() {
             <Separator className="my-3"/>
             <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label className="text-light_grey text-sm mb-2 block">
+                <label htmlFor="username" className="text-light_grey text-sm mb-2 block">
                   Username
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    id="username"
                     name="username"
                     type="text"
                     required
@@ -70,11 +71,12 @@ export default function loginPage() {
               </div>
 
               <div>
-                <label className="text-light_grey text-sm mb-2 block">
+                <label htmlFor="password" className="text-light_grey text-sm mb-2 block">
                   Password
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    id="password"
                     name="password"
                     type="password"
                     required

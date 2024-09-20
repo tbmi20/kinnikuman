@@ -37,11 +37,12 @@ export default function registerPage() {
             <Separator className="my-3"/>
             <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label className="text-light_grey text-sm mb-2 block">
+                <label htmlFor="username" className="text-light_grey text-sm mb-2 block">
                   Username
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    id="username"
                     name="username"
                     type="text"
                     required
@@ -71,11 +72,12 @@ export default function registerPage() {
               </div>
 
               <div>
-                <label className="text-light_grey text-sm mb-2 block">
+                <label htmlFor="email" className="text-light_grey text-sm mb-2 block">
                   Email
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    id="email"
                     name="username"
                     type="text"
                     required
@@ -105,11 +107,12 @@ export default function registerPage() {
               </div>
 
               <div>
-                <label className="text-light_grey text-sm mb-2 block">
+                <label htmlFor="password" className="text-light_grey text-sm mb-2 block">
                   Password
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    id="password"
                     name="password"
                     type="password"
                     required
