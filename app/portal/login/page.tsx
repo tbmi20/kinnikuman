@@ -91,13 +91,13 @@ export default function loginPage() {
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center">
                   <input
-                    id="remember-me"
-                    name="remember-me"
+                    id="remember"
+                    name="remember"
                     type="checkbox"
                     className="h-4 w-4 shrink-0 text-cool_blue focus:ring-blue-500 border-gray-300 rounded"
                   />
                   <label
-                    htmlFor="remember-me"
+                    htmlFor="remember"
                     className="ml-3 block text-sm text-light_grey"
                   >
                     Remember me
