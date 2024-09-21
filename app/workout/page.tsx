@@ -2,9 +2,7 @@ import React from 'react';
 import WorkoutCard from '../components/WorkoutCard';
 import Navbar from '../components/Navbar';
 import Background from '../components/Background';
-import getWorkouts from '../../lib/mongo/workouts.js';
 import Header from '../components/Header';
-import client from '../../lib/mongo/.';
 
 ////
 export default function WorkoutPage() {
@@ -22,12 +20,3 @@ export default function WorkoutPage() {
         
     );
 };
-
-function testdb() {
-    const cur = client.db("fitnessApp").collection("workouts").find({
-        name: "Upper Body Pump" 
-    }, {exercises: true})
-
-    const exercises = cur.exercises;
-
-}

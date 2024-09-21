@@ -1,7 +1,7 @@
 "use client";
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
-import { handleLogin } from "@/lib/portals/auth";
+import { handleLogin } from "@/app/api/auth";
 import { useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import Link from "next/link";
