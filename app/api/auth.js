@@ -10,9 +10,20 @@ async function handleLogin(formData) {
   const user = await db
     .collection("users")
     .findOne({ username: formData.username, password: hash });
+
+  if (user) {
+  }
 }
 
-function handleRegister() {}
+async function handleRegister(formData) {
+  let hash = hashPassword(formData.password);
+
+  const client = await clientPromise;
+  const db = client.db("fitnessApp");
+  await db
+    .collection("users")
+    .insertOne({ username: formData.username, email: formData.email, password: hash });
+}
 
 async function hashPassword(password) {
   const bcrypt = require("bcrypt");
