@@ -13,7 +13,7 @@ export default function Header({ page }: HeaderProps) {
       <div className="flex items-center justify-between">
         <a href="./" className="flex-shrink-0">
           <Avatar>
-            <AvatarImage src="public\sumo.png" />
+            <AvatarImage src="/images/sumo.png" />
             <AvatarFallback>筋肉饅</AvatarFallback>
           </Avatar>
         </a>
