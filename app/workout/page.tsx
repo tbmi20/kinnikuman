@@ -16,19 +16,7 @@ export default function WorkoutPage() {
         <WorkoutCard />
         <WorkoutCard />
       </div>
-      <div></div>
-      <TestExercise/>
       <Navbar></Navbar>
     </div>
   );
-}
-
-async function TestExercise() {
-  const client = await clientPromise;
-  const db = client.db("fitnessApp");
-  const exercise = await db
-    .collection("exercises")
-    .findOne({ name: "Bench Press" });
-
-  return <div>{exercise!.name}</div>;
 }
