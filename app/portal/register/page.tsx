@@ -3,7 +3,7 @@
 import Background from "@/app/components/Background";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import {handleRegister} from "@/app/api/auth";
+import {handleRegister} from "@/app/api/account/auth";
 import { useState } from 'react';
 
 export default function registerPage() {
