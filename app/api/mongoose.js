@@ -4,4 +4,5 @@ const { Schema } = mongoose;
 const exerciseSchema = new Schema({
   name: String, 
   type: String,
+  primaryMuscles: Array,
 });
