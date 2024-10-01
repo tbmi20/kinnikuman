@@ -5,7 +5,6 @@ import Background from "../components/Background";
 import Header from "../components/Header";
 import clientPromise from "@/lib/mongodb";
 
-//
 export default function WorkoutPage() {
   return (
     <div>
