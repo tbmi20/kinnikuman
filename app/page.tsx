@@ -1,22 +1,24 @@
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Background from "./components/Background";
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 import Header from "./components/Header";
+
+//
 
 export default function HomePage() {
   return (
-    <div >
+    <div>
       <Background></Background>
       <Header page="Dashboard"></Header>
-      <CarouselDemo/>
+      <CarouselDemo />
       <Link href="/workout">Workout</Link>
       <Navbar></Navbar>
     </div>
@@ -42,5 +44,5 @@ function CarouselDemo() {
       </CarouselContent>
       <CarouselNext />
     </Carousel>
-  )
+  );
 }
