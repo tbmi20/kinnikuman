@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import Header from "./components/Header";
 
-//
+////
 
 export default function HomePage() {
   return (
